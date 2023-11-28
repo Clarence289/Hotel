@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 //room context
 import { RoomContext } from '../context/RoomContext';
 //headless ui menu
@@ -6,14 +6,17 @@ import {Menu} from '@headlessui/react';
 //icons
 import { BsChevronDown } from 'react-icons/bs';
 
-const AdultsDropdown = () => {
+
 
   const list =[
-    {name: '1Adult'},
+    {name: '1 Adult'},
     {name: '2 Adult'},
     {name: '3 Adult'},
     {name: '4 Adult'},
-  ]
+  ];
+  const AdultsDropdown = () => {
+    const {adults, setAdults} = useContext(RoomContext)
+
   return(
     <Menu as= 'div' className='w-full h-full bg-white relative'>
       {/*btn*/}
@@ -24,11 +27,15 @@ const AdultsDropdown = () => {
       {/*items*/}
       <Menu.Items as='ul' className='bg-white absolute w-full flex flex-col z-40'>
         {list.map((li, index)=>{
-          return<Menu.Item as='li' className='border-b last-of-type:border-b-0 h-12
+          return<Menu.Item 
+          onClick={()=> setAdults(li.name)}
+          as='li' 
+          className='border-b last-of-type:border-b-0 h-12
           hover:bg-accent hover:text-white w-full flex justify-center items-center cursor-pointer'
           key={index}
           >
-            {li.name}</Menu.Item>
+            {li.name}
+            </Menu.Item>
         })}
       </Menu.Items>
     </Menu>
