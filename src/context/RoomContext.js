@@ -9,25 +9,21 @@ const RoomProvider = ({ children }) => {
   const [kids, setKids] = useState('0 Kids');
   const [total, setTotal] = useState(0);
 
-  const handleClick = useCallback((e) => {
-    e.preventDefault()
+  useEffect(() => {
+    setTotal(Number(adults[0]) + Number(kids[0]));
+  }, [adults, kids]);
+
+  const handleClick = (e) => {
+    e.preventDefault();
     console.log(total);
     console.log(rooms);
 
-    const newRooms =roomData.filter(room =>{
-      return total <= room.maxPerson
-    })
-    setRooms(newRooms)
-  
+    // Filter rooms based on total (person)
+    const newRooms = roomData.filter(room => total <= room.maxPerson);
+    setRooms(newRooms);
+  };
 
-  
-    // Your handleClick logic here
-  }, [adults, kids]); // Include dependencies of handleClick in the useCallback dependency array
-
-  useEffect(() => {
-    setTotal(prevTotal => Number(adults[0]) + Number(kids[0]));
-    console.log(total);
-  }, [adults, kids, total, handleClick]); // Include handleClick in the dependency array
+  // console.log(rooms);
 
   return (
     <RoomContext.Provider value={{ rooms, adults, setAdults, kids, setKids, handleClick }}>
