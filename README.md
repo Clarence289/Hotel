@@ -26,7 +26,10 @@ To run this project locally, follow these steps:
 ```bash
 git clone https://github.com/your-username/Hotel-panding.git
 
-![Web capture_19-1-2024_16821_localhost](https://github.com/Clarence289/Hotel-pending/assets/81553212/c575b651-8540-4e6d-8554-235b2eabe592)   ![Web capture_19-1-2024_16541_localhost](https://github.com/Clarence289/Hotel-pending/assets/81553212/c4f698a4-20ca-4d70-8afd-0066b2133b49)
+![Web capture_19-1-2024_16821_localhost](https://github.com/Clarence289/Hotel-pending/assets/81553212/48b2e10d-1df4-4c32-af74-33cfc7d02063)
+
+![Web capture_19-1-2024_16541_localhost](https://github.com/Clarence289/Hotel-pending/assets/81553212/2d0b11c6-a982-4770-b8b7-bc6b1f4247dc)
+
 
 
    
