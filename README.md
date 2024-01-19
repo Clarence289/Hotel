@@ -19,6 +19,8 @@ This is a hotel booking app built with React.js and Firebase.
 
 ![Web capture_19-1-2024_16212_localhost](https://github.com/Clarence289/Hotel-pending/assets/81553212/d68df686-d81c-4694-831e-cfc25ff1c664)
 
+
+
 ![Web capture_19-1-2024_16224_localhost](https://github.com/Clarence289/Hotel-pending/assets/81553212/cd991486-5d29-4aee-8fd4-aca6873588f5)
 
 ## Installation
@@ -26,7 +28,8 @@ This is a hotel booking app built with React.js and Firebase.
 To run this project locally, follow these steps:
 
 1. Clone the repository:
-
+2. npm install
+3. npm start
 ```bash
 git clone https://github.com/your-username/Hotel-panding.git
 
